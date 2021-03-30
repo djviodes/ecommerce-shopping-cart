@@ -12,8 +12,8 @@ export const products = [
         price: 3500.00,
         description: 'This livestream will broadcast via a private YouTube link that will be sent to ticket purchasers an hour prior to showtime.',
         numberOfTickets: 50,
-        saleStart: new Date('April 01, 2021 08:00:00').getTime(),
-        saleExpire: new Date('April 05, 2021 20:00:00').getTime()
+        saleStart: new Date('March 01, 2021 08:00:00').getTime(),
+        saleExpire: new Date('April 30, 2021 20:00:00').getTime()
     },
     {
         id: 3,
