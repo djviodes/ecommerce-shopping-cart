@@ -2,7 +2,7 @@ export const products = [
     {
         id: 1,
         name: 'Free Ticket',
-        price: 'Free',
+        price: 0.00,
         description: 'Free ticket for anyone to make a valuable contribution towards our future online events programme. Thank you.',
         numberOfTickets: 100
     },
@@ -12,8 +12,8 @@ export const products = [
         price: 3500.00,
         description: 'This livestream will broadcast via a private YouTube link that will be sent to ticket purchasers an hour prior to showtime.',
         numberOfTickets: 50,
-        saleStart: new Date('2021-04-01'),
-        saleExpire: new Date('2021-04-08')
+        saleStart: new Date('April 01, 2021 08:00:00').getTime(),
+        saleExpire: new Date('April 05, 2021 20:00:00').getTime()
     },
     {
         id: 3,
