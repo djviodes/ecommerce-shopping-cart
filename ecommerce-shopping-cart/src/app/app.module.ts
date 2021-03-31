@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { ProductListComponent } from './product-list/product-list.component';
   ],
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    OrderSummaryComponent
   ],
   bootstrap: [AppComponent],
   providers: []

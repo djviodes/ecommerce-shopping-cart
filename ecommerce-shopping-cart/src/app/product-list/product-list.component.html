@@ -1,42 +1,55 @@
-<div *ngFor="let product of products">
-  <img
-    *ngIf="product.image"
-    src="{{ product.image }}"
-    alt="Good Strategy Bad Strategy Book Cover"
-  />
-  <h3>{{ product.name }}</h3>
-  <p>{{ product.description }}</p>
-  <div *ngIf="product.saleStart">
-    <p>
-      {{ saleTimeLeft(product.saleStart, product.saleExpire) }}
-    </p>
-  </div>
-  <h4 *ngIf="product.price === 0.0; else price">Free</h4>
-  <ng-template #price>{{ product.price | currency }}</ng-template>
-  <div *ngIf="product.donateOptions">
-    <div *ngFor="let option of product.donateOptions">
-      <button>{{ option | currency }}</button>
-    </div>
-    <form>
-      <label for="enterAmount">
-        <input
-          type="number"
-          name="enterAmount"
-          id="enterAmount"
-          placeholder="$0.00"
+<div class="container">
+  <div *ngFor="let product of products" class="individualProduct">
+    <div class="divForImageProducts">
+      <div>
+        <img
+          *ngIf="product.image"
+          src="{{ product.image }}"
+          alt="Good Strategy Bad Strategy Book Cover"
+          class="itemImage"
         />
-      </label>
-    </form>
+      </div>
+      <div>
+        <h3 class="productName">{{ product.name }}</h3>
+        <p class="productDescription">{{ product.description }}</p>
+        <div *ngIf="product.saleStart">
+          <p class="saleInfo">
+            {{ saleTimeLeft(product.saleStart, product.saleExpire) }}
+          </p>
+        </div>
+        <div class="priceAmountContainer">
+          <h4 *ngIf="product.price === 0.0; else price" class="productPrice">
+            Free
+          </h4>
+          <ng-template #price>
+            <p class="productPrice">{{ product.price | currency }}</p>
+          </ng-template>
+          <div *ngIf="product.donateOptions">
+            <div *ngFor="let option of product.donateOptions">
+              <button>{{ option | currency }}</button>
+            </div>
+            <form>
+              <label for="enterAmount">
+                <input
+                  type="number"
+                  name="enterAmount"
+                  id="enterAmount"
+                  placeholder="$0.00"
+                />
+              </label>
+            </form>
+          </div>
+          <form *ngIf="product.price">
+            <select
+              name="amountOfTickets"
+              (change)="addToCart(product.name, $event)"
+              class="amountOptions"
+            >
+              <option *ngFor="let v of values" [value]="v">{{ v }}</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-  <form>
-    <select name="amountOfTickets">
-      <option value="zero">0</option>
-      <option value="one">1</option>
-      <option value="two">2</option>
-      <option value="three">3</option>
-      <option value="four">4</option>
-      <option value="five">5</option>
-      <option value="six">6</option>
-    </select>
-  </form>
 </div>

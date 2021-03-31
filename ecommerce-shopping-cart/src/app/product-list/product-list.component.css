@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 821px;
+  height: 120vh;
+  left: 151px;
+  top: 131px;
+  background: #ffffff;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+}
+
+.individualProduct {
+  width: 75%;
+  padding: 5% 0;
+  border-bottom: 1px solid #dddbda;
+}
+
+.divForImageProducts {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemImage {
+  width: 81px;
+  height: 123px;
+}
+
+.productName {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.productDescription {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.saleInfo {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 22px;
+  color: #706e6b;
+}
+
+.priceAmountContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.productPrice {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  padding-right: 2%;
+}
+
+.amountOptions {
+  width: 50px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
